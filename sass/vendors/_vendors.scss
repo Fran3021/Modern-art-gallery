@@ -1,0 +1,27 @@
+//importamos las fuentes
+@font-face {
+    font-family: 'Big Shoulders Display';
+    src: url('../../fonts/');
+    src: url('../../fonts/?#iefix') format('embedded-opentype'),
+        url('../../fonts/BigShouldersDisplay-Black.woff2') format('woff2'),
+        url('../../fonts/BigShouldersDisplay-Black.woff') format('woff'),
+        url('../../fonts/BigShouldersDisplay-Black.ttf') format('truetype'),
+        url('../../fonts/BigShouldersDisplay-Black.svg#BigShouldersDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../../fonts/Outfit-Light.eot');
+    src: url('../../fonts/Outfit-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/Outfit-Light.woff2') format('woff2'),
+        url('../../fonts/Outfit-Light.woff') format('woff'),
+        url('../../fonts/Outfit-Light.ttf') format('truetype'),
+        url('../../fonts/Outfit-Light.svg#Outfit-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,99 @@
+.hero{
+    margin-bottom: 120px;
+    &__gallery{
+        .hero-mobile-1{
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        .title-gallery-1{
+            h2{
+                font-size: 50px;
+                font-family: $shoulder;
+                line-height: 45px;
+                font-weight: 900;
+                color: $black;
+                margin-bottom: 21px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $outfit;
+                color: $silver-dark;
+                margin-bottom: 32px;
+                width: 90%;
+            }
+        }
+    }
+    &__gallery-2{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .hero-mobile-2{
+            width: 100%;
+        }
+        .hero-mobile-3{
+            width: 100%;
+        }
+        .title-gallery-2{
+            background-color: $black;
+            padding:48px 24px 47px 24px ;
+            h2{
+                color: $white;
+                font-size: 50px;
+                line-height: 45px;
+                font-family: $shoulder;
+                font-weight: 900;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $outfit;
+                color: $white;
+            }
+        }
+    }
+}
+
+.main-location{
+    background-color: $black;
+    padding-top: 48px;
+    padding-bottom: 56px;
+    .hero-location{
+        h2{
+            color: $white;
+            font-size: 50px;
+            line-height: 45px;
+            font-weight: 900;
+            font-family: $shoulder;
+            margin-bottom: 48px;
+        }
+        .hero-location-description{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h3{
+                font-size: 32px;
+                font-weight: 900;
+                line-height: 32px;
+                color: $beig;
+                font-family: $shoulder;
+            }
+            .streets{
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-family: $outfit;
+                    color: $white;
+                }
+            }
+            .parrafo{
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-family: $outfit;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
