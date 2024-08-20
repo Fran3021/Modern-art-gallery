@@ -97,6 +97,7 @@
             font-family: $outfit;
             color: $silver-dark;
             max-width: 95%;
+            margin-bottom: 32px;
             @include breakpoint(desktopxl){
                 font-size: 22px;
                 line-height: 32px;
