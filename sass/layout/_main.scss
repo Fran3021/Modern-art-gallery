@@ -1,0 +1,272 @@
+.hero{
+    margin-bottom: 120px;
+    @include breakpoint(desktopxl){
+        margin-bottom: 180px;
+    }
+    &__gallery{
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin-bottom: 0px;
+        }
+        @include breakpoint(tablethorizontal){
+            margin-bottom: 10px;
+        }
+        @include breakpoint(desktopxl){
+            display: grid;
+            grid-template-columns: 0.75fr 1fr;
+            grid-template-rows: 1fr;
+            margin-bottom: 30px;
+        }
+        .hero-mobile-1{
+            width: 100%;
+            margin-bottom: 25px;
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        .hero-tablet-1{
+            display: none;
+            @include breakpoint(tablet){
+                display: block;
+                width: 100%;
+                grid-column: 2 / span 1;
+                grid-row: 1 / span 1;
+            }
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .hero-desktop-1{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                width: 100%;
+            }
+        }
+        .title-gallery-1{
+            @include breakpoint(tablet){
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 1;
+                padding-top: 30px;
+            }
+            h2{
+                font-size: 50px;
+                font-family: $shoulder;
+                line-height: 45px;
+                font-weight: 900;
+                color: $black;
+                margin-bottom: 21px;
+                @include breakpoint(tablet){
+                    width: 60%;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 60px;
+                    line-height: 60px;
+                    margin-bottom: 32px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $outfit;
+                color: $silver-dark;
+                margin-bottom: 32px;
+                width: 90%;
+                @include breakpoint(tablet){
+                    width: 65%;
+                }
+                @include breakpoint(desktopxl){
+                    font-size: 22px;
+                    line-height: 32px;
+                    width: 70%;
+                }
+            }
+        }
+    }
+    &__gallery-2{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        @include breakpoint(tablet){
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: 0.5fr 1fr 1fr;
+            grid-template-rows: 0.75fr 1fr;
+            gap: 11px;
+        }
+        @include breakpoint(desktopxl){
+            display: grid;
+            grid-template-columns: 0.5fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+        }
+        .hero-mobile-2{
+            width: 100%;
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        .hero-tablet-2{
+            display: none;
+            @include breakpoint(tablet){
+                display: block;
+                width: 100%;
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 2;
+            }
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .hero-desktop-2{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                width: 100%;
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 2;
+            }
+        }
+        .hero-mobile-3{
+            width: 100%;
+            @include breakpoint(tablet){
+                display: none;
+            }
+        }
+        .hero-tablet-3{
+            display: none;
+            @include breakpoint(tablet){
+                display: block;
+                width: 100%;
+                grid-column: 3 / span 1;
+                grid-row: 1 / span 1;
+            }
+            @include breakpoint(desktopxl){
+                display: none;
+                width: 100%;
+                grid-column: 3 / span 1;
+                grid-row: 1 / span 1;
+            }
+        }
+        .hero-desktop-3{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+                width: 100%;
+            }
+        }
+        .title-gallery-2{
+            background-color: $black;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding:48px 24px 47px 24px;
+            @include breakpoint(tablet){
+                grid-column: 3 / span 1;
+                grid-row: 2 / span 1;
+                padding: 85px 28px;
+            }
+            @include breakpoint(desktopxl){
+                grid-column: 3 / span 1;
+                grid-row: 2 / span 1;
+            }
+            h2{
+                color: $white;
+                font-size: 50px;
+                line-height: 45px;
+                font-family: $shoulder;
+                font-weight: 900;
+                @include breakpoint(desktopxl){
+                    font-size: 60px;
+                    line-height: 60px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                font-family: $outfit;
+                color: $white;
+                @include breakpoint(desktopxl){
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
+
+.main-location{
+    background-color: $black;
+    padding-top: 48px;
+    padding-bottom: 56px;
+    @include breakpoint(desktopxl){
+        gap: 220px;
+        padding: 104px 165px 128px 165px;
+    }
+    .hero-location{
+        @include breakpoint(tablet){
+            display: flex;
+            gap: 68px;
+        }
+        h2{
+            color: $white;
+            font-size: 50px;
+            line-height: 45px;
+            font-weight: 900;
+            font-family: $shoulder;
+            margin-bottom: 48px;
+            @include breakpoint(tablet){
+                font-size: 55px;
+                line-height: 50px;
+            }
+            @include breakpoint(desktopxl){
+                font-size: 70px;
+                line-height: 70px;
+            }
+        }
+        .hero-location-description{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h3{
+                font-size: 32px;
+                font-weight: 900;
+                line-height: 32px;
+                color: $beig;
+                font-family: $shoulder;
+                @include breakpoint(desktopxl){
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+            }
+            .streets{
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-family: $outfit;
+                    color: $white;
+                    @include breakpoint(desktopxl){
+                        font-size: 22px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .parrafo{
+                p{
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-family: $outfit;
+                    color: $white;
+                    @include breakpoint(desktopxl){
+                        font-size: 22px;
+                        line-height: 32px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

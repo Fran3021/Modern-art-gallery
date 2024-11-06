@@ -1,0 +1,95 @@
+.footer-principal{
+    background-color: $black;
+    padding: 48px 32px;
+    .footer-description{
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        p{
+            font-family: $outfit;
+            font-size: 16px;
+            line-height: 26px;
+            color: $white;
+            font-weight: 500;
+            @include breakpoint(tablet){
+                width: 45%;
+            }
+            @include breakpoint(desktopxl){
+                font-size: 18px;
+                line-height: 28px;
+                width: 39%;
+            }
+        }
+        .icons-footer{
+            display: flex;
+            gap: 20px;
+            @include breakpoint(tablet){
+                margin-left: 40px;
+            }
+        }
+        .logo-footer-mobile{
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .logo-footer-desktop{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+            }
+        }
+    }
+}
+
+.footer-location{
+    background-color: $beig;
+    padding: 48px 32px;
+    .footer-description-location{
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        p{
+            font-family: $outfit;
+            font-size: 16px;
+            line-height: 26px;
+            color: $black;
+            font-weight: 500;
+            @include breakpoint(tablet){
+                width: 45%;
+            }
+            @include breakpoint(desktopxl){
+                font-size: 18px;
+                line-height: 28px;
+                width: 39%;
+            }
+        }
+        .icons-footer-location{
+            display: flex;
+            gap: 20px;
+            @include breakpoint(tablet){
+                margin-left: 40px;
+            }
+        }
+        .logo-footer-location-mobile{
+            @include breakpoint(desktopxl){
+                display: none;
+            }
+        }
+        .logo-footer-location-desktop{
+            display: none;
+            @include breakpoint(desktopxl){
+                display: block;
+            }
+        }
+    }
+}
