@@ -1,94 +1,130 @@
-.footer-principal{
-    background-color: $black;
-    padding: 48px 32px;
-    .footer-description{
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+.footer-home{
+    background-color: abs.$black;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include abs.breakpoint(tablet){
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+    @include abs.breakpoint(desktopxl){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .container-footer-home{
         display: flex;
-        flex-direction: column;
         gap: 38px;
-        @include breakpoint(tablet){
-            display: flex;
+        flex-direction: column;
+        @include abs.breakpoint(tablet){
             flex-direction: row;
             justify-content: space-between;
+            gap: 0;
         }
-        p{
-            font-family: $outfit;
-            font-size: 16px;
-            line-height: 26px;
-            color: $white;
-            font-weight: 500;
-            @include breakpoint(tablet){
-                width: 45%;
+        .icon-web-white-sm{
+            max-width: 40%;
+            @include abs.breakpoint(tablet){
+                align-self: flex-start;
             }
-            @include breakpoint(desktopxl){
-                font-size: 18px;
-                line-height: 28px;
-                width: 39%;
-            }
-        }
-        .icons-footer{
-            display: flex;
-            gap: 20px;
-            @include breakpoint(tablet){
-                margin-left: 40px;
-            }
-        }
-        .logo-footer-mobile{
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: none;
             }
         }
-        .logo-footer-desktop{
+        .icon-web-white-xl{
             display: none;
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: block;
+                max-width: 40%;
+                align-self: flex-start;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            font-family: abs.$outfit;
+            font-weight: 300;
+            color: abs.$white;
+            @include abs.breakpoint(tablet){
+                width: 40%;
+                margin-right: 10%;
+            }
+            @include abs.breakpoint(desktopxl){
+                font-size: 18px;
+                line-height: 28px;
+                width: 38%;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                gap: 20px;
+                align-items: center;
             }
         }
     }
 }
 
 .footer-location{
-    background-color: $beig;
-    padding: 48px 32px;
-    .footer-description-location{
+    background-color: abs.$brown;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include abs.breakpoint(tablet){
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+    @include abs.breakpoint(desktopxl){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .container-footer-location{
         display: flex;
-        flex-direction: column;
         gap: 38px;
-        @include breakpoint(tablet){
-            display: flex;
+        flex-direction: column;
+        @include abs.breakpoint(tablet){
             flex-direction: row;
             justify-content: space-between;
+            gap: 0;
         }
-        p{
-            font-family: $outfit;
-            font-size: 16px;
-            line-height: 26px;
-            color: $black;
-            font-weight: 500;
-            @include breakpoint(tablet){
-                width: 45%;
+        .icon-web-black-sm{
+            max-width: 40%;
+            @include abs.breakpoint(tablet){
+                align-self: flex-start;
             }
-            @include breakpoint(desktopxl){
-                font-size: 18px;
-                line-height: 28px;
-                width: 39%;
-            }
-        }
-        .icons-footer-location{
-            display: flex;
-            gap: 20px;
-            @include breakpoint(tablet){
-                margin-left: 40px;
-            }
-        }
-        .logo-footer-location-mobile{
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: none;
             }
         }
-        .logo-footer-location-desktop{
+        .icon-web-black-xl{
             display: none;
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: block;
+                max-width: 40%;
+                align-self: flex-start;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            font-family: abs.$outfit;
+            font-weight: 300;
+            color: abs.$black;
+            @include abs.breakpoint(tablet){
+                width: 40%;
+                margin-right: 10%;
+            }
+            @include abs.breakpoint(desktopxl){
+                font-size: 18px;
+                line-height: 28px;
+                width: 38%;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                gap: 20px;
+                align-items: center;
             }
         }
     }

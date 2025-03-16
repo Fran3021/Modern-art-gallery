@@ -1,125 +1,134 @@
-.header-principal{
-    position: relative;
-    .container{
-        @include breakpoint(tablet){
-            padding-top: 130px;
-        }
-        @include breakpoint(tablethorizontal){
-            padding-top: 200px;
-        }
-        @include breakpoint(desktop){
-            padding-top: 260px;
-        }
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+
+.header-home{
+    margin-bottom: 120px;
+    @include abs.breakpoint(tablet){
+        position: relative;
+        margin-bottom: 265px;
     }
-    .mobile-header{
+    @include abs.breakpoint(desktopxl){
+        margin-bottom: 494px;
+    }
+    @include abs.breakpoint(desktopxxl){
+        margin-bottom: 800px;
+    }
+    .image-header-mobile{
         width: 100%;
         margin-bottom: 32px;
-        @include breakpoint(tablet){
+        @include abs.breakpoint(tablet){
             display: none;
         }
     }
-    .tablet-header{
+    .image-header-tablet{
         display: none;
-        @include breakpoint(tablet){
+        @include abs.breakpoint(tablet){
             display: block;
             width: 55%;
             position: absolute;
             z-index: -1;
+            top: 0;
+            left: 0;
         }
-        @include breakpoint(desktopxl){
+        @include abs.breakpoint(desktopxl){
             display: none;
         }
     }
-    .desktop-header{
+    .image-header-desktop{
         display: none;
-        @include breakpoint(desktopxl){
+        @include abs.breakpoint(desktopxl){
             display: block;
-            max-width: 70%;
             position: absolute;
             z-index: -1;
+            width: 70%;
+            left: 0;
+            top: 0;
         }
     }
-    .header{
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        margin-bottom: 120px;
-        @include breakpoint(tablet){
-            gap: 48px;
-            width: 50%;
-            margin-bottom: 265px;
-            margin-left: auto;
-        }
-        @include breakpoint(tablethorizontal){
-            margin-bottom: 450px;
-        }
-        @include breakpoint(desktop){
-            margin-bottom: 530px;
-        }
-        @include breakpoint(desktopxl){
+    .container-header-home{
+        @include abs.breakpoint(tablet){
             display: flex;
-            flex-direction: row;
-            width: 100%;
-            margin-left: 0px;
-            justify-content: space-between;
-            gap: 0px;
+            flex-direction: column;
+            gap: 48px;
+            padding-top: 145px;
         }
-        .header-description{
-            @include breakpoint(desktopxl){
-                display: flex;
-                flex-direction: column;
-                max-width: 29%;
-                gap: 64px;
-            }
+        @include abs.breakpoint(desktopxl){
+            padding-top: 190px;
+            flex-direction: row;
+            justify-content: space-between;
         }
         h1{
-            font-family:$shoulder;
             font-size: 60px;
-            font-weight: 900;
+            font-family: abs.$bigshoulder;
+            color: abs.$black;
             line-height: 55px;
-            color: $black;
-            @include breakpoint(tablet){
+            font-weight: 900;
+            width: 90%;
+            margin-bottom: 32px;
+            @include abs.breakpoint(tablet){
                 font-size: 70px;
                 line-height: 65px;
+                margin-bottom: 0;
+                width: 53%;
+                align-self: flex-end;
             }
-            @include breakpoint(desktopxl){
-                color: $white;
-            }
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 font-size: 96px;
                 line-height: 88px;
-                max-width: 50%;
+                color: abs.$white;
+                align-self: normal;
+                width: 41%;
             }
         }
-        p{
-            font-size: 18px;
-            line-height: 28px;
-            font-family: $outfit;
-            color: $silver-dark;
-            max-width: 95%;
-            margin-bottom: 32px;
-            @include breakpoint(desktopxl){
-                font-size: 22px;
-                line-height: 32px;
-            }
-        }
-        .location{
-            display: flex;
-            align-items: center;
-            &:hover{
-                .button{
-                    background-color: $beig
-                }
-                .arrow{
-                    background-color: $black
+        .text-button{
+            @include abs.breakpoint(tablet){
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+                width: 53%;
+                align-self: flex-end;
+                @include abs.breakpoint(desktopxl){
+                    align-self: normal;
+                    gap: 64px;
+                    width: 30%;
                 }
             }
-            .button{
-                @include button;
+            p{
+                font-size: 18px;
+                font-family: abs.$outfit;
+                font-weight: 300;
+                color: abs.$dark-silver;
+                line-height: 28px;
+                margin-bottom: 32px;
+                @include abs.breakpoint(tablet){
+                    margin-bottom: 0;
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 22px;
+                    line-height: 32px;
+                }
             }
-            .arrow{
-                background-color: $beig;
-                padding: 21px;
+            .button-header{
+                display: flex;
+                &:hover{
+                    span{
+                        cursor: pointer;
+                        background-color: abs.$brown;
+                    }
+                    a{
+                        background-color: abs.$black;
+                    }
+                }
+                span{
+                    transition: background-color 1s ease;
+                    @include comp.button1;
+                }
+                a{
+                    transition: background-color 1s ease;
+                    @include comp.button1-arrow;
+                }
             }
         }
     }
@@ -127,57 +136,57 @@
 
 .header-location{
     position: relative;
-    .location-mobile{
+    .image-header-location-mobile{
         width: 100%;
-        @include breakpoint(tablet){
+        display: block;
+        @include abs.breakpoint(tablet){
             display: none;
         }
     }
-    .location-tablet{
+    .image-header-location-tablet{
         display: none;
-        @include breakpoint(tablet){
+        @include abs.breakpoint(tablet){
             display: block;
             width: 100%;
         }
-        @include breakpoint(desktopxl){
+        @include abs.breakpoint(desktopxl){
             display: none;
         }
     }
-    .location-desktop{
+    .image-header-location-desktop{
         display: none;
-        @include breakpoint(desktopxl){
+        @include abs.breakpoint(desktopxl){
             display: block;
             width: 100%;
         }
     }
-    .location{
+    .button-header-location{
+        display: flex;
         position: absolute;
         top: 0;
         left: 0;
-        display: flex;
-        align-items: center;
-        @include breakpoint(tablet){
-            top: 0;
-            left: 5%;
+        @include abs.breakpoint(tablet){
+            left: 7.5%;
         }
-        @include breakpoint(desktopxl){
-            top: 0;
+        @include abs.breakpoint(desktopxl){
             left: 10%;
         }
         &:hover{
-            .button{
-                background-color: $beig
+            span{
+                cursor: pointer;
+                background-color: abs.$brown;
             }
-            .arrow{
-                background-color: $black
+            a{
+                background-color: abs.$black;
             }
         }
-        .button{
-            @include button;
+        span{
+            transition: background-color 1s ease;
+            @include comp.button1;
         }
-        .arrow{
-            background-color: $beig;
-            padding: 21px;
+        a{
+            transition: background-color 1s ease;
+            @include comp.button1-arrow;
         }
     }
 }

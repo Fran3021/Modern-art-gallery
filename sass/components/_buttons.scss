@@ -1,0 +1,16 @@
+@use '../abstracts/abstracts' as abs;
+
+@mixin button1{
+    font-size: 20px;
+    font-family: abs.$bigshoulder;
+    font-weight: bold;
+    color: abs.$white;
+    background-color: abs.$black;
+    padding: 24px 35px 24px 32px;
+    letter-spacing: 3.64px;
+}
+
+@mixin button1-arrow{
+    padding: 24px;
+    background-color: abs.$brown;
+}

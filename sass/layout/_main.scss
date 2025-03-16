@@ -1,67 +1,73 @@
-.hero{
+@use '../abstracts/abstracts' as abs;
+@use '../base/base' as base;
+@use '../components/components' as comp;
+
+.main-home{
     margin-bottom: 120px;
-    @include breakpoint(desktopxl){
-        margin-bottom: 180px;
-    }
-    &__gallery{
-        @include breakpoint(tablet){
+    .container-main-home{
+        @include abs.breakpoint(tablet){
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            margin-bottom: 0px;
+            align-items: stretch;
+            column-gap: 11px;
+            row-gap: 11px;
+            grid-template-columns:0.5fr 0.5fr 0.25fr 1fr;
+            grid-template-rows: 0.5fr 0.3fr 0.5fr
         }
-        @include breakpoint(tablethorizontal){
-            margin-bottom: 10px;
+        @include abs.breakpoint(desktopxl){
+            column-gap: 30px;
+            row-gap: 30px;
         }
-        @include breakpoint(desktopxl){
-            display: grid;
-            grid-template-columns: 0.75fr 1fr;
-            grid-template-rows: 1fr;
-            margin-bottom: 30px;
-        }
-        .hero-mobile-1{
+        .image-hero-1-mobile{
             width: 100%;
             margin-bottom: 25px;
-            @include breakpoint(tablet){
+            @include abs.breakpoint(tablet){
                 display: none;
             }
         }
-        .hero-tablet-1{
+        .image-hero-1-tablet{
             display: none;
-            @include breakpoint(tablet){
+            @include abs.breakpoint(tablet){
                 display: block;
                 width: 100%;
-                grid-column: 2 / span 1;
+                grid-column: 3  / span 2;
                 grid-row: 1 / span 1;
             }
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: none;
             }
         }
-        .hero-desktop-1{
+        .image-hero-1-desktop{
             display: none;
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: block;
                 width: 100%;
+                grid-column: 3  / span 2;
+                grid-row: 1 / span 1;
             }
         }
-        .title-gallery-1{
-            @include breakpoint(tablet){
-                grid-column: 1 / span 1;
+        .title-text-white{
+            margin-bottom: 32px;
+            @include abs.breakpoint(tablet){
+                margin-bottom: 0;
+                padding-right: 57px;
+                padding-bottom: 65px;
+                padding-top: 36px;
+                grid-column: 1 / span 2;
                 grid-row: 1 / span 1;
-                padding-top: 30px;
+            }
+            @include abs.breakpoint(desktopxl){
+                padding-top: 60px;
+                padding-right: 125px;
+                padding-bottom: 60px;
             }
             h2{
                 font-size: 50px;
-                font-family: $shoulder;
                 line-height: 45px;
+                font-family: abs.$bigshoulder;
                 font-weight: 900;
-                color: $black;
+                color: abs.$black;
                 margin-bottom: 21px;
-                @include breakpoint(tablet){
-                    width: 60%;
-                }
-                @include breakpoint(desktopxl){
+                @include abs.breakpoint(desktopxl){
                     font-size: 60px;
                     line-height: 60px;
                     margin-bottom: 32px;
@@ -70,125 +76,102 @@
             p{
                 font-size: 18px;
                 line-height: 28px;
-                font-family: $outfit;
-                color: $silver-dark;
-                margin-bottom: 32px;
-                width: 90%;
-                @include breakpoint(tablet){
-                    width: 65%;
-                }
-                @include breakpoint(desktopxl){
+                font-family: abs.$outfit;
+                font-weight: 300;
+                color: abs.$dark-silver;
+                @include abs.breakpoint(desktopxl){
                     font-size: 22px;
                     line-height: 32px;
-                    width: 70%;
                 }
             }
         }
-    }
-    &__gallery-2{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        @include breakpoint(tablet){
-            display: grid;
-            align-items: stretch;
-            grid-template-columns: 0.5fr 1fr 1fr;
-            grid-template-rows: 0.75fr 1fr;
-            gap: 11px;
-        }
-        @include breakpoint(desktopxl){
-            display: grid;
-            grid-template-columns: 0.5fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 30px;
-        }
-        .hero-mobile-2{
+        .image-hero-2-mobile{
             width: 100%;
-            @include breakpoint(tablet){
+            margin-bottom: 16px;
+            @include abs.breakpoint(tablet){
                 display: none;
             }
         }
-        .hero-tablet-2{
+        .image-hero-2-tablet{
             display: none;
-            @include breakpoint(tablet){
+            @include abs.breakpoint(tablet){
                 display: block;
                 width: 100%;
-                grid-column: 1 / span 2;
-                grid-row: 1 / span 2;
+                grid-column: 1 / span 3;
+                grid-row: 2 / span 2;
             }
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: none;
             }
         }
-        .hero-desktop-2{
+        .image-hero-2-desktop{
             display: none;
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: block;
                 width: 100%;
-                grid-column: 1 / span 2;
-                grid-row: 1 / span 2;
+                grid-column: 1 / span 3;
+                grid-row: 2 / span 2;
             }
         }
-        .hero-mobile-3{
+        .image-hero-3-mobile{
             width: 100%;
-            @include breakpoint(tablet){
+            margin-bottom: 16px;
+            @include abs.breakpoint(tablet){
                 display: none;
             }
         }
-        .hero-tablet-3{
+        .image-hero-3-tablet{
             display: none;
-            @include breakpoint(tablet){
+            @include abs.breakpoint(tablet){
                 display: block;
                 width: 100%;
-                grid-column: 3 / span 1;
-                grid-row: 1 / span 1;
+                grid-column: 4 / span 1;
+                grid-row: 2 / span 1;
             }
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: none;
-                width: 100%;
-                grid-column: 3 / span 1;
-                grid-row: 1 / span 1;
             }
         }
-        .hero-desktop-3{
+        .image-hero-3-desktop{
             display: none;
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 display: block;
                 width: 100%;
+                grid-column: 4 / span 1;
+                grid-row: 2 / span 1;
             }
         }
-        .title-gallery-2{
-            background-color: $black;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            padding:48px 24px 47px 24px;
-            @include breakpoint(tablet){
-                grid-column: 3 / span 1;
-                grid-row: 2 / span 1;
-                padding: 85px 28px;
+        .title-text-black{
+            background-color: abs.$black;
+            padding: 48px 24px;
+            @include abs.breakpoint(tablet){
+                grid-column: 4 / span 1;
+                grid-row: 3 / span 1;
+                padding: 85px 29px;
             }
-            @include breakpoint(desktopxl){
-                grid-column: 3 / span 1;
-                grid-row: 2 / span 1;
+            @include abs.breakpoint(desktopxl){
+                padding: 85px 47px 64px 48px ;
             }
             h2{
-                color: $white;
                 font-size: 50px;
                 line-height: 45px;
-                font-family: $shoulder;
+                font-family: abs.$bigshoulder;
                 font-weight: 900;
-                @include breakpoint(desktopxl){
+                color: abs.$white;
+                margin-bottom: 24px;
+                @include abs.breakpoint(desktopxl){
                     font-size: 60px;
                     line-height: 60px;
+                    margin-bottom: 32px;
                 }
             }
             p{
                 font-size: 18px;
                 line-height: 28px;
-                font-family: $outfit;
-                color: $white;
-                @include breakpoint(desktopxl){
+                font-family: abs.$outfit;
+                font-weight: 300;
+                color: abs.$white;
+                @include abs.breakpoint(desktopxl){
                     font-size: 22px;
                     line-height: 32px;
                 }
@@ -198,73 +181,85 @@
 }
 
 .main-location{
-    background-color: $black;
-    padding-top: 48px;
-    padding-bottom: 56px;
-    @include breakpoint(desktopxl){
-        gap: 220px;
-        padding: 104px 165px 128px 165px;
-    }
-    .hero-location{
-        @include breakpoint(tablet){
+    background-color: abs.$black;
+    .container-main-location{
+        padding-top: 48px;
+        padding-bottom: 56px;
+        @include abs.breakpoint(tablet){
+            padding-top: 88px;
+            padding-bottom: 80px;
             display: flex;
-            gap: 68px;
+            justify-content: space-between;
         }
-        h2{
-            color: $white;
+        @include abs.breakpoint(desktopxl){
+            padding-top: 104px;
+            padding-bottom: 128px;
+        }
+        h1{
             font-size: 50px;
             line-height: 45px;
+            font-family: abs.$bigshoulder;
             font-weight: 900;
-            font-family: $shoulder;
+            color: abs.$white;
             margin-bottom: 48px;
-            @include breakpoint(tablet){
+            @include abs.breakpoint(tablet){
                 font-size: 55px;
                 line-height: 50px;
+                width: 40%;
             }
-            @include breakpoint(desktopxl){
+            @include abs.breakpoint(desktopxl){
                 font-size: 70px;
                 line-height: 70px;
+                width: 30%;
             }
         }
-        .hero-location-description{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            h3{
+        .street-text{
+            @include abs.breakpoint(tablet){
+                width: 60%;
+                margin-left: 5%;
+            }
+            @include abs.breakpoint(desktopxl){
+                width: 45%;
+                margin-left: 0;
+            }
+            h5{
                 font-size: 32px;
-                font-weight: 900;
                 line-height: 32px;
-                color: $beig;
-                font-family: $shoulder;
-                @include breakpoint(desktopxl){
+                font-family: abs.$bigshoulder;
+                font-weight: 900;
+                color: abs.$brown;
+                margin-bottom: 20px;
+                @include abs.breakpoint(desktopxl){
                     font-size: 36px;
                     line-height: 36px;
+                    margin-bottom: 24px;
                 }
             }
-            .streets{
-                p{
+            ul{
+                list-style: none;
+                margin-bottom: 20px;
+                margin-bottom: 32px;
+                li{
                     font-size: 18px;
                     line-height: 28px;
-                    font-family: $outfit;
-                    color: $white;
-                    @include breakpoint(desktopxl){
+                    color: abs.$white;
+                    font-weight: 300;
+                    font-family: abs.$outfit;
+                    @include abs.breakpoint(desktopxl){
                         font-size: 22px;
                         line-height: 32px;
-                        font-weight: 500;
                     }
                 }
             }
-            .parrafo{
-                p{
-                    font-size: 18px;
-                    line-height: 28px;
-                    font-family: $outfit;
-                    color: $white;
-                    @include breakpoint(desktopxl){
-                        font-size: 22px;
-                        line-height: 32px;
-                        font-weight: 500;
-                    }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+                color: abs.$white;
+                font-weight: 300;
+                font-family: abs.$outfit;
+                @include abs.breakpoint(desktopxl){
+                    font-size: 22px;
+                    line-height: 32px;
                 }
             }
         }

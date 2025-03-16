@@ -1,0 +1,39 @@
+//fuentes de la pagina
+@font-face {
+    font-family: 'Big Shoulders';
+    src: url('/fonts/BigShoulders-Black.eot');
+    src: url('/fonts/BigShoulders-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BigShoulders-Black.woff2') format('woff2'),
+        url('/fonts/BigShoulders-Black.woff') format('woff'),
+        url('/fonts/BigShoulders-Black.ttf') format('truetype'),
+        url('/fonts/BigShoulders-Black.svg#BigShoulders-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Big Shoulders';
+    src: url('/fonts/BigShoulders-ExtraBold.eot');
+    src: url('/fonts/BigShoulders-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/BigShoulders-ExtraBold.woff2') format('woff2'),
+        url('/fonts/BigShoulders-ExtraBold.woff') format('woff'),
+        url('/fonts/BigShoulders-ExtraBold.ttf') format('truetype'),
+        url('/fonts/BigShoulders-ExtraBold.svg#BigShoulders-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/fonts/Outfit-Light.eot');
+    src: url('/fonts/Outfit-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Outfit-Light.woff2') format('woff2'),
+        url('/fonts/Outfit-Light.woff') format('woff'),
+        url('/fonts/Outfit-Light.ttf') format('truetype'),
+        url('/fonts/Outfit-Light.svg#Outfit-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
