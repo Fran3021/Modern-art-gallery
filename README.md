@@ -1,6 +1,6 @@
 # Modern art gallery
 
-###### Adapted from mobile devices to desktop in 1920px.
+###### Adapted for resolutions: 375px / 768px / 1440px.
 
 ## Technologies used:
 - HTML
